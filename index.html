@@ -1,150 +1,120 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Societe I-Tech | Nos Services</title>
-    <!-- Font Awesome for Icons -->
+    <title>Societe I-Tech | Nos Spécialités</title>
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root {
-            --primary: #2c3e50;
-            --accent: #3498db;
-            --bg: #f8f9fa;
-        }
-
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg);
+            font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
-            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
         }
-
         header {
-            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), 
-                        url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000');
-            background-size: cover;
+            background: #2c3e50;
             color: white;
-            padding: 100px 20px;
+            padding: 60px 20px;
             text-align: center;
         }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 20px;
             max-width: 1200px;
-            margin: -50px auto 50px;
-            padding: 0 20px;
+            margin: 0 auto;
         }
-
-        .service-card {
+        .card {
             background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 300px;
             padding: 30px;
-            border-radius: 12px;
             text-align: center;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
             transition: transform 0.3s ease;
-            border-top: 4px solid var(--accent);
+            border-bottom: 5px solid #3498db;
         }
-
-        .service-card:hover {
+        .card:hover {
             transform: translateY(-10px);
         }
-
-        .service-card i {
-            font-size: 3rem;
-            color: var(--accent);
+        .card i {
+            font-size: 40px;
+            color: #3498db;
             margin-bottom: 20px;
         }
-
-        .service-card h3 {
-            color: var(--primary);
-            margin-bottom: 15px;
+        .card h3 {
+            margin: 10px 0;
+            color: #2c3e50;
+            font-size: 1.4rem;
         }
-
-        .btn-service {
-            display: inline-block;
-            background: var(--primary);
+        .btn-action {
+            background: #3498db;
             color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: 600;
-            margin-top: 15px;
-            transition: background 0.3s;
-            cursor: pointer;
             border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+            font-weight: bold;
             width: 100%;
         }
-
-        .btn-service:hover {
-            background: var(--accent);
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px;
-            background: var(--primary);
-            color: white;
-            margin-top: 50px;
+        .btn-action:hover {
+            background: #2980b9;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Societe I-Tech</h1>
-        <p>Expertise Technique & Solutions de Sécurité Intégrées</p>
-    </header>
+<header>
+    <h1>Societe I-Tech</h1>
+    <p>Solutions de Sécurité & Maintenance Informatique</p>
+</header>
 
-    <div class="container">
-        <div class="services-grid">
-            <!-- Service 1 -->
-            <div class="service-card">
-                <i class="fas fa-video"></i>
-                <h3>Surveillance Camera</h3>
-                <p>Installation et configuration de systèmes de vidéosurveillance intelligents.</p>
-                <button class="btn-service" onclick="alert('Contactez-nous pour un devis Caméra')">En savoir plus</button>
-            </div>
-
-            <!-- Service 2 -->
-            <div class="service-card">
-                <i class="fas fa-fire-extinguisher"></i>
-                <h3>Système Incendie</h3>
-                <p>Solutions de détection de fumée et alertes de sécurité incendie.</p>
-                <button class="btn-service" onclick="alert('Détails Système Incendie')">Détails techniques</button>
-            </div>
-
-            <!-- Service 3 -->
-            <div class="service-card">
-                <i class="fas fa-shield-alt"></i>
-                <h3>Système d'alarme</h3>
-                <p>Protection intrusion haute performance pour locaux et habitations.</p>
-                <button class="btn-service" onclick="alert('Options d\'alarme')">Configurer</button>
-            </div>
-
-            <!-- Service 4 -->
-            <div class="service-card">
-                <i class="fas fa-laptop-medical"></i>
-                <h3>Vente et Réparation PC</h3>
-                <p>Maintenance informatique et vente de matériel professionnel.</p>
-                <button class="btn-service" onclick="alert('Support Technique PC')">Réserver une réparation</button>
-            </div>
-
-            <!-- Service 5 -->
-            <div class="service-card">
-                <i class="fas fa-network-wired"></i>
-                <h3>Services Réseau</h3>
-                <p>Câblage structuré, configuration Wi-Fi et administration réseaux.</p>
-                <button class="btn-service" onclick="alert('Consultation Réseau')">Expertise Réseau</button>
-            </div>
-        </div>
+<div class="services-container">
+    <!-- Service 1 -->
+    <div class="card">
+        <i class="fas fa-camera"></i>
+        <h3>Surveillance camera</h3>
+        <p>متخصصون في كاميرات المراقبة</p>
+        <button class="btn-action">Demander un devis</button>
     </div>
 
-    <footer>
-        <p>&copy; 2026 Societe I-Tech - Solutions Technologiques à Fès</p>
-    </footer>
+    <!-- Service 2 -->
+    <div class="card">
+        <i class="fas fa-fire"></i>
+        <h3>System incendie</h3>
+        <p>أنظمة الكشف عن الحرائق</p>
+        <button class="btn-action">Voir les options</button>
+    </div>
+
+    <!-- Service 3 -->
+    <div class="card">
+        <i class="fas fa-bell"></i>
+        <h3>System d'alarme</h3>
+        <p>أنظمة الحماية والإنذار</p>
+        <button class="btn-action">En savoir plus</button>
+    </div>
+
+    <!-- Service 4 -->
+    <div class="card">
+        <i class="fas fa-tools"></i>
+        <h3>Vente et Réparation PC</h3>
+        <p>بيع وإصلاح الحواسيب</p>
+        <button class="btn-action">Service Technique</button>
+    </div>
+
+    <!-- Service 5 -->
+    <div class="card">
+        <i class="fas fa-network-wired"></i>
+        <h3>Services reseau</h3>
+        <p>تركيب وصيانة الشبكات</p>
+        <button class="btn-action">Consulter un expert</button>
+    </div>
+</div>
 
 </body>
 </html>

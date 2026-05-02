@@ -13,30 +13,12 @@
             background-color: #f4f4f9;
             color: #333;
         }
-        
         header {
-            /* تعديل الخلفية لإضافة الصورة مع طبقة شفافة لتوضيح النص */
-            background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), 
-                        url('17777299129865473950082808167097_b03a58.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed; /* يعطي تأثير حركي جميل عند التمرير */
+            background: #2c3e50;
             color: white;
-            padding: 100px 20px;
+            padding: 60px 20px;
             text-align: center;
         }
-
-        header h1 {
-            font-size: 3rem;
-            margin: 0;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
         .services-container {
             display: flex;
             flex-wrap: wrap;
@@ -46,7 +28,6 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-
         .card {
             background: white;
             border-radius: 10px;
@@ -57,23 +38,19 @@
             transition: transform 0.3s ease;
             border-bottom: 5px solid #3498db;
         }
-
         .card:hover {
             transform: translateY(-10px);
         }
-
         .card i {
             font-size: 40px;
             color: #3498db;
             margin-bottom: 20px;
         }
-
         .card h3 {
             margin: 10px 0;
             color: #2c3e50;
             font-size: 1.4rem;
         }
-
         .btn-action {
             background: #3498db;
             color: white;
@@ -84,9 +61,7 @@
             margin-top: 15px;
             font-weight: bold;
             width: 100%;
-            transition: 0.3s;
         }
-
         .btn-action:hover {
             background: #2980b9;
         }
@@ -100,43 +75,43 @@
 </header>
 
 <div class="services-container">
-    <!-- Service 1: Vidéosurveillance -->
+    <!-- Service 1 -->
     <div class="card">
         <i class="fas fa-camera"></i>
         <h3>Surveillance camera</h3>
-        <p>متخصصون في أنظمة المراقبة المرئية والأنظمة المدمجة الذكية</p>
+        <p>متخصصون في كاميرات المراقبة</p>
         <button class="btn-action">Demander un devis</button>
     </div>
 
-    <!-- Service 2: Incendie -->
+    <!-- Service 2 -->
     <div class="card">
         <i class="fas fa-fire"></i>
-        <h3>Système incendie</h3>
-        <p>حلول متطورة للكشف عن الحرائق والإنذار المبكر</p>
+        <h3>System incendie</h3>
+        <p>أنظمة الكشف عن الحرائق</p>
         <button class="btn-action">Voir les options</button>
     </div>
 
-    <!-- Service 3: Alarme -->
+    <!-- Service 3 -->
     <div class="card">
         <i class="fas fa-bell"></i>
-        <h3>Système d'alarme</h3>
-        <p>حماية الممتلكات عبر أنظمة إنذار ذكية وموثوقة</p>
+        <h3>System d'alarme</h3>
+        <p>أنظمة الحماية والإنذار</p>
         <button class="btn-action">En savoir plus</button>
     </div>
 
-    <!-- Service 4: Maintenance PC -->
+    <!-- Service 4 -->
     <div class="card">
         <i class="fas fa-tools"></i>
         <h3>Vente et Réparation PC</h3>
-        <p>خدمات الدعم الفني، بيع وصيانة الحواسيب المكتبية والمحمولة</p>
+        <p>بيع وإصلاح الحواسيب</p>
         <button class="btn-action">Service Technique</button>
     </div>
 
-    <!-- Service 5: Réseaux -->
+    <!-- Service 5 -->
     <div class="card">
         <i class="fas fa-network-wired"></i>
-        <h3>Services réseau</h3>
-        <p>تصميم، تركيب وصيانة الشبكات السلكية واللاسلكية</p>
+        <h3>Services reseau</h3>
+        <p>تركيب وصيانة الشبكات</p>
         <button class="btn-action">Consulter un expert</button>
     </div>
 </div>

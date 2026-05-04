@@ -26,6 +26,7 @@
             border: none;
         }
 
+        /* --- Zone dyal l-khalfya li kat-scrolla --- */
         .page-body-content {
             background-image: url('Technologie.jpg'); 
             background-size: cover;
@@ -33,7 +34,7 @@
             background-repeat: no-repeat;
             background-attachment: scroll; 
             padding: 40px 0;
-            min-height: calc(100vh - 350px); /* Bach l-footer dima yji l-te7t */
+            min-height: 80vh; /* Bach t-forsa l-khalfya tban */
         }
 
         .section-intro {
@@ -105,40 +106,27 @@
             width: 100%;
             font-weight: bold;
             margin-top: 10px;
-            transition: 0.2s;
         }
 
-        .btn-action:hover {
-            background: #2980b9;
-        }
-
-        /* --- Style dyal Footer (N-Nachr) --- */
-        footer {
+        /* --- Style dyal Footer (I-Tech Craft Vision) --- */
+        .footer-site {
             background-color: #2c3e50;
-            color: white;
+            color: #ecf0f1;
             text-align: center;
-            padding: 20px 0;
-            width: 100%;
+            padding: 30px 20px;
             font-size: 14px;
+            border-top: 4px solid #3498db;
         }
 
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
+        .footer-site p {
+            margin: 8px 0;
+            letter-spacing: 1px;
         }
 
-        .footer-content p {
-            margin: 5px 0;
-        }
-
-        .footer-links a {
+        .footer-site .credits {
+            font-weight: bold;
             color: #3498db;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        .footer-links a:hover {
-            text-decoration: underline;
+            text-transform: uppercase;
         }
     </style>
 </head>
@@ -193,16 +181,12 @@
 
 </div>
 
-<!-- Ha l-footer li zdt l-te7t -->
-<footer>
+<!-- Ha l-footer li zdt lk l-te7t -->
+<footer class="footer-site">
     <div class="footer-content">
-        <p>&copy; 2026 I-Tech Craft Vision. Tous droits réservés.</p>
-        <p>Fès Shore, Maroc | Contact: +212 6 XX XX XX XX</p>
-        <div class="footer-links">
-            <a href="#">Facebook</a> | 
-            <a href="#">LinkedIn</a> | 
-            <a href="#">Contactez-nous</a>
-        </div>
+        <p class="credits">I-Tech Craft Vision</p>
+        <p>&copy; 2026 Tous droits réservés.</p>
+        <p>Fès, Maroc | Excellence en Systèmes Embarqués et Sécurité</p>
     </div>
 </footer>
 

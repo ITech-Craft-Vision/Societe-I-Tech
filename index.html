@@ -15,6 +15,7 @@
         }
 
         header {
+            /* L-Header m3zoul o makat-at-erch 3lih l-khalfya li l-te7t */
             background-image: url('Amine.jpg');
             background-repeat: no-repeat;
             background-size: 100% 100%; 
@@ -26,26 +27,25 @@
             border: none;
         }
 
-        /* --- Hadi hiya la zone li fiha l-khalfya l-te7t --- */
-        .main-wrapper {
-            background-image: url('Hicham.jpg'); /* Smiya d tswira dyalk */
+        /* --- Hadi hiya la zone li ghadi tkon fiha l-khalfya dyal l-te7t --- */
+        .page-body-content {
+            background-image: url('Hicham.jpg'); 
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
             background-repeat: no-repeat;
-            padding-top: 40px;
-            padding-bottom: 60px;
+            background-attachment: fixed; /* Bach tswira tbqa fixe fach t-scrolli */
+            padding: 40px 0;
             min-height: 100vh;
         }
 
         .section-intro {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.9); /* Chwiya chffaf bach tban l-khalfya */
             padding: 30px;
             max-width: 900px;
             margin: 0 auto 40px auto;
             border-radius: 15px;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         .img-tech {
@@ -70,7 +70,7 @@
         }
 
         .card {
-            background: white;
+            background: rgba(255, 255, 255, 0.95);
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             width: 280px;
@@ -82,6 +82,7 @@
 
         .card:hover {
             transform: translateY(-5px);
+            background: white;
         }
 
         .card i {
@@ -116,9 +117,9 @@
 
 <header></header>
 
-<!-- Wrapper jdid bach l-background t-appliqua ghir l-te7t -->
-<div class="main-wrapper">
-    
+<!-- Ga3 dakchi li l-te7t ghadi ykoun wast had l-div li fiha l-khalfya -->
+<div class="page-body-content">
+
     <div class="section-intro">
         <h2>Votre Partenaire Technologique</h2>
         <p>Nous fournissons les meilleures solutions de sécurité.</p>
@@ -162,7 +163,7 @@
         </div>
     </div>
 
-</div> <!-- Fin main-wrapper -->
+</div>
 
 </body>
 </html>

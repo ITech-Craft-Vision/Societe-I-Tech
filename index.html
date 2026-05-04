@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Societe I-Tech | Nos Spécialités</title>
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
-            /* --- Modification ici pour l'image de fond --- */
+            /* --- L-khalfya t-at-er ghir 3la l-te7t --- */
             background-image: url('Hicham.jpg'); 
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
             background-repeat: no-repeat;
-            /* ------------------------------------------- */
+            background-size: cover;
+            background-position: bottom center; /* Kat-khalliha dima l-te7t */
+            background-attachment: fixed;
+            background-color: #f4f4f9; /* Lon dyal l-foq fach tswira tkon l-te7t */
             color: #333;
         }
 
         header {
-            /* Sora dyal l-header dyalk - T-akked mn smiya f GitHub */
             background-image: url('Amine.jpg');
             background-repeat: no-repeat;
             background-size: 100% 100%; 
@@ -30,16 +30,20 @@
             margin: 0;
             padding: 0;
             border: none;
+            position: relative;
+            z-index: 10;
         }
 
         .section-intro {
-            background: white;
+            background: rgba(255, 255, 255, 0.9);
             padding: 30px;
             max-width: 900px;
             margin: 20px auto;
             border-radius: 15px;
             text-align: center;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 5;
         }
 
         .img-tech {
@@ -58,15 +62,15 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
-            padding: 20px;
+            padding: 40px 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .card {
-            background: white;
+            background: rgba(255, 255, 255, 0.95);
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             width: 280px;
             padding: 25px;
             text-align: center;
@@ -76,6 +80,7 @@
 
         .card:hover {
             transform: translateY(-5px);
+            background: white;
         }
 
         .card i {

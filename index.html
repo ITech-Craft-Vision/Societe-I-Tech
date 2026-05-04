@@ -10,15 +10,40 @@
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
-            background-color: #f4f4f9;
+            /* Sora dyal l-khalfiya dyal l-page kamla */
+            background: #f4f4f9 url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') fixed center;
+            background-size: cover;
             color: #333;
         }
+
         header {
-            background: #2c3e50;
+            /* Sora dyal l-background f l-header m3a wahd l-ghcha (overlay) bach l-ktba tban */
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), 
+                        url('Amine.jpg');
+            background-size: cover;
+            background-position: center;
             color: white;
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
         }
+
+        .section-intro {
+            background: white;
+            padding: 40px;
+            max-width: 800px;
+            margin: 40px auto;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .img-tech {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
         .services-container {
             display: flex;
             flex-wrap: wrap;
@@ -28,8 +53,9 @@
             max-width: 1200px;
             margin: 0 auto;
         }
+
         .card {
-            background: white;
+            background: rgba(255, 255, 255, 0.95); /* Shwiya d shafafiya bach tban l-khalfiya */
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             width: 300px;
@@ -37,20 +63,25 @@
             text-align: center;
             transition: transform 0.3s ease;
             border-bottom: 5px solid #3498db;
+            backdrop-filter: blur(5px); /* Tbab f l-khlafia dyal l-card */
         }
+
         .card:hover {
             transform: translateY(-10px);
         }
+
         .card i {
             font-size: 40px;
             color: #3498db;
             margin-bottom: 20px;
         }
+
         .card h3 {
             margin: 10px 0;
             color: #2c3e50;
             font-size: 1.4rem;
         }
+
         .btn-action {
             background: #3498db;
             color: white;
@@ -62,6 +93,7 @@
             font-weight: bold;
             width: 100%;
         }
+
         .btn-action:hover {
             background: #2980b9;
         }
@@ -73,6 +105,13 @@
     <h1>Societe I-Tech</h1>
     <p>Solutions de Sécurité & Maintenance Informatique</p>
 </header>
+
+<!-- Section jdida f l-body m3a sora -->
+<div class="section-intro">
+    <h2>Votre Partenaire Technologique</h2>
+    <p>Nous fournissons les meilleures solutions de sécurité pour votre entreprise.</p>
+    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Technology Center" class="img-tech">
+</div>
 
 <div class="services-container">
     <!-- Service 1 -->

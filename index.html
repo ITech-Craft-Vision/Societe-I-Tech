@@ -15,7 +15,6 @@
         }
 
         header {
-            /* L-Header b sora dyal Amine */
             background-image: url('Amine.jpg');
             background-repeat: no-repeat;
             background-size: 100% 100%; 
@@ -27,22 +26,18 @@
             border: none;
         }
 
-        /* --- Hadi hiya la zone li ghadi tkon fiha l-khalfya li kat-scrolla --- */
         .page-body-content {
             background-image: url('Technologie.jpg'); 
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            
-            /* Hna fin t-bdlat bach l-khalfya tbqa thbat m3ak */
             background-attachment: scroll; 
-            
             padding: 40px 0;
-            min-height: 100vh;
+            min-height: calc(100vh - 350px); /* Bach l-footer dima yji l-te7t */
         }
 
         .section-intro {
-            background: rgba(255, 255, 255, 0.9); /* Chffaf bach tban tswira dyal l-body */
+            background: rgba(255, 255, 255, 0.9);
             padding: 30px;
             max-width: 900px;
             margin: 0 auto 40px auto;
@@ -116,13 +111,41 @@
         .btn-action:hover {
             background: #2980b9;
         }
+
+        /* --- Style dyal Footer (N-Nachr) --- */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            margin: 5px 0;
+        }
+
+        .footer-links a {
+            color: #3498db;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
 
 <header></header>
 
-<!-- Khalfya dyal had l-div ghada thrak m3a l-mouse fach t-scrolli -->
 <div class="page-body-content">
 
     <div class="section-intro">
@@ -132,7 +155,6 @@
     </div>
 
     <div class="services-container">
-        <!-- Section dyal les caméras li kntou k-t-installiw -->
         <div class="card">
             <i class="fas fa-camera"></i>
             <h3>Surveillance caméra</h3>
@@ -170,6 +192,19 @@
     </div>
 
 </div>
+
+<!-- Ha l-footer li zdt l-te7t -->
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2026 I-Tech Craft Vision. Tous droits réservés.</p>
+        <p>Fès Shore, Maroc | Contact: +212 6 XX XX XX XX</p>
+        <div class="footer-links">
+            <a href="#">Facebook</a> | 
+            <a href="#">LinkedIn</a> | 
+            <a href="#">Contactez-nous</a>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>

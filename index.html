@@ -10,13 +10,7 @@
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
-            /* --- L-khalfya t-at-er ghir 3la l-te7t --- */
-            background-image: url('Hicham.jpg'); 
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: bottom center; /* Kat-khalliha dima l-te7t */
-            background-attachment: fixed;
-            background-color: #f4f4f9; /* Lon dyal l-foq fach tswira tkon l-te7t */
+            background-color: #f4f4f9;
             color: #333;
         }
 
@@ -30,20 +24,28 @@
             margin: 0;
             padding: 0;
             border: none;
-            position: relative;
-            z-index: 10;
+        }
+
+        /* --- Hadi hiya la zone li fiha l-khalfya l-te7t --- */
+        .main-wrapper {
+            background-image: url('Hicham.jpg'); /* Smiya d tswira dyalk */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            padding-top: 40px;
+            padding-bottom: 60px;
+            min-height: 100vh;
         }
 
         .section-intro {
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.95);
             padding: 30px;
             max-width: 900px;
-            margin: 20px auto;
+            margin: 0 auto 40px auto;
             border-radius: 15px;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            position: relative;
-            z-index: 5;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
         .img-tech {
@@ -62,15 +64,15 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
-            padding: 40px 20px;
+            padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.95);
+            background: white;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             width: 280px;
             padding: 25px;
             text-align: center;
@@ -80,7 +82,6 @@
 
         .card:hover {
             transform: translateY(-5px);
-            background: white;
         }
 
         .card i {
@@ -115,48 +116,53 @@
 
 <header></header>
 
-<div class="section-intro">
-    <h2>Votre Partenaire Technologique</h2>
-    <p>Nous fournissons les meilleures solutions de sécurité.</p>
-    <img src="https://t3.ftcdn.net/jpg/01/62/30/58/360_F_1623058132_kG5ipb3Bf4RfZYd0SwBZQuhrMwIvXvVx.jpg" alt="Caméra de Surveillance" class="img-tech">
-</div>
-
-<div class="services-container">
-    <div class="card">
-        <i class="fas fa-camera"></i>
-        <h3>Surveillance caméra</h3>
-        <p>متخصصون في كاميرات المراقبة</p>
-        <button class="btn-action">Demander un devis</button>
+<!-- Wrapper jdid bach l-background t-appliqua ghir l-te7t -->
+<div class="main-wrapper">
+    
+    <div class="section-intro">
+        <h2>Votre Partenaire Technologique</h2>
+        <p>Nous fournissons les meilleures solutions de sécurité.</p>
+        <img src="https://t3.ftcdn.net/jpg/01/62/30/58/360_F_1623058132_kG5ipb3Bf4RfZYd0SwBZQuhrMwIvXvVx.jpg" alt="Caméra de Surveillance" class="img-tech">
     </div>
 
-    <div class="card">
-        <i class="fas fa-fire"></i>
-        <h3>Système incendie</h3>
-        <p>أنظمة الكشف عن الحرائق</p>
-        <button class="btn-action">Voir les options</button>
+    <div class="services-container">
+        <div class="card">
+            <i class="fas fa-camera"></i>
+            <h3>Surveillance caméra</h3>
+            <p>متخصصون في كاميرات المراقبة</p>
+            <button class="btn-action">Demander un devis</button>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-fire"></i>
+            <h3>Système incendie</h3>
+            <p>أنظمة الكشف عن الحرائق</p>
+            <button class="btn-action">Voir les options</button>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-bell"></i>
+            <h3>Système d'alarme</h3>
+            <p>أنظمة الحماية والإنذار</p>
+            <button class="btn-action">En savoir plus</button>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-tools"></i>
+            <h3>Vente et Réparation PC</h3>
+            <p>بيع وإصلاح الحواسيب</p>
+            <button class="btn-action">Service Technique</button>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-network-wired"></i>
+            <h3>Services réseau</h3>
+            <p>تركيب وصيانة الشبكات</p>
+            <button class="btn-action">Consulter un expert</button>
+        </div>
     </div>
 
-    <div class="card">
-        <i class="fas fa-bell"></i>
-        <h3>Système d'alarme</h3>
-        <p>أنظمة الحماية والإنذار</p>
-        <button class="btn-action">En savoir plus</button>
-    </div>
-
-    <div class="card">
-        <i class="fas fa-tools"></i>
-        <h3>Vente et Réparation PC</h3>
-        <p>بيع وإصلاح الحواسيب</p>
-        <button class="btn-action">Service Technique</button>
-    </div>
-
-    <div class="card">
-        <i class="fas fa-network-wired"></i>
-        <h3>Services réseau</h3>
-        <p>تركيب وصيانة الشبكات</p>
-        <button class="btn-action">Consulter un expert</button>
-    </div>
-</div>
+</div> <!-- Fin main-wrapper -->
 
 </body>
 </html>

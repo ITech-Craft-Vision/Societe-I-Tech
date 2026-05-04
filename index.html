@@ -15,7 +15,7 @@
         }
 
         header {
-            /* L-Header m3zoul o makat-at-erch 3lih l-khalfya li l-te7t */
+            /* L-Header b sora dyal Amine */
             background-image: url('Amine.jpg');
             background-repeat: no-repeat;
             background-size: 100% 100%; 
@@ -27,19 +27,22 @@
             border: none;
         }
 
-        /* --- Hadi hiya la zone li ghadi tkon fiha l-khalfya dyal l-te7t --- */
+        /* --- Hadi hiya la zone li ghadi tkon fiha l-khalfya li kat-scrolla --- */
         .page-body-content {
             background-image: url('Technologie.jpg'); 
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            background-attachment: fixed; /* Bach tswira tbqa fixe fach t-scrolli */
+            
+            /* Hna fin t-bdlat bach l-khalfya tbqa thbat m3ak */
+            background-attachment: scroll; 
+            
             padding: 40px 0;
             min-height: 100vh;
         }
 
         .section-intro {
-            background: rgba(255, 255, 255, 0.9); /* Chwiya chffaf bach tban l-khalfya */
+            background: rgba(255, 255, 255, 0.9); /* Chffaf bach tban tswira dyal l-body */
             padding: 30px;
             max-width: 900px;
             margin: 0 auto 40px auto;
@@ -83,6 +86,7 @@
         .card:hover {
             transform: translateY(-5px);
             background: white;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
         }
 
         .card i {
@@ -106,6 +110,7 @@
             width: 100%;
             font-weight: bold;
             margin-top: 10px;
+            transition: 0.2s;
         }
 
         .btn-action:hover {
@@ -117,48 +122,49 @@
 
 <header></header>
 
-<!-- Ga3 dakchi li l-te7t ghadi ykoun wast had l-div li fiha l-khalfya -->
+<!-- Khalfya dyal had l-div ghada thrak m3a l-mouse fach t-scrolli -->
 <div class="page-body-content">
 
     <div class="section-intro">
         <h2>Votre Partenaire Technologique</h2>
-        <p>Nous fournissons les meilleures solutions de sécurité.</p>
+        <p>Nous fournissons les meilleures solutions de sécurité à Fès.</p>
         <img src="https://t3.ftcdn.net/jpg/01/62/30/58/360_F_1623058132_kG5ipb3Bf4RfZYd0SwBZQuhrMwIvXvVx.jpg" alt="Caméra de Surveillance" class="img-tech">
     </div>
 
     <div class="services-container">
+        <!-- Section dyal les caméras li kntou k-t-installiw -->
         <div class="card">
             <i class="fas fa-camera"></i>
             <h3>Surveillance caméra</h3>
-            <p>متخصصون في كاميرات المراقبة</p>
+            <p>متخصصون في تركيب وصيانة كاميرات المراقبة</p>
             <button class="btn-action">Demander un devis</button>
         </div>
 
         <div class="card">
             <i class="fas fa-fire"></i>
             <h3>Système incendie</h3>
-            <p>أنظمة الكشف عن الحرائق</p>
+            <p>أنظمة الكشف عن الحرائق والوقاية</p>
             <button class="btn-action">Voir les options</button>
         </div>
 
         <div class="card">
             <i class="fas fa-bell"></i>
             <h3>Système d'alarme</h3>
-            <p>أنظمة الحماية والإنذار</p>
+            <p>أنظمة الحماية المتكاملة والإنذار</p>
             <button class="btn-action">En savoir plus</button>
         </div>
 
         <div class="card">
             <i class="fas fa-tools"></i>
             <h3>Vente et Réparation PC</h3>
-            <p>بيع وإصلاح الحواسيب</p>
+            <p>بيع وإصلاح جميع أنواع الحواسيب</p>
             <button class="btn-action">Service Technique</button>
         </div>
 
         <div class="card">
             <i class="fas fa-network-wired"></i>
             <h3>Services réseau</h3>
-            <p>تركيب وصيانة الشبكات</p>
+            <p>حلول الشبكات السلكية واللاسلكية</p>
             <button class="btn-action">Consulter un expert</button>
         </div>
     </div>

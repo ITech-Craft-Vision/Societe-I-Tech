@@ -15,37 +15,35 @@
         }
 
         header {
-            /* Hna ghadi t-dir smiya dyal sora dyalk li fiha l-logo (مثلا header-bg.jpg) */
-            /* 7iydna l-gradient (l-ghța) bach tban sora sfiya */
-            background: url('Amine.jpg') no-repeat center center;
-            background-size: contain; /* t-khalli sora tban kamla bla mat-9t3 */
-            height: 300px; /* T9dr t-zid f l-3lo 3la 7sab sora dyalk */
+            /* Hna nst3mlo sora dyalk lli fiha l-logo */
+            background-image: url('1777889528011449199643435648601_a6e342.jpg');
+            background-repeat: no-repeat;
+            /* Had l-khasiya t-khelli sora tched l-3ard kaml (100%) w l-height kaml (100%) */
+            background-size: 100% 100%; 
+            background-position: center;
+            height: 250px; /* T9dr t-zid awla t-n9s f l-3lo bach t-ji m9adda m3a sora */
+            width: 100%;
+            margin: 0;
             padding: 0;
-            text-align: center;
+            border: none;
         }
 
-        /* Ila bghiti l-header ikoun kbir 3la 7sab sora, bdl l-height hna */
-        @media (max-width: 768px) {
-            header {
-                height: 150px;
-            }
-        }
-
+        /* Adjustments bach l-body w l-cards ijiw mzyanin */
         .section-intro {
             background: white;
-            padding: 40px;
-            max-width: 800px;
+            padding: 30px;
+            max-width: 900px;
             margin: 20px auto;
-            border-radius: 15px;
+            border-radius: 10px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         .img-tech {
             width: 100%;
-            max-width: 500px;
-            border-radius: 10px;
-            margin-top: 20px;
+            max-width: 600px;
+            border-radius: 8px;
+            margin-top: 15px;
         }
 
         .services-container {
@@ -53,7 +51,7 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
-            padding: 40px 20px;
+            padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -62,56 +60,44 @@
             background: white;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            width: 300px;
-            padding: 30px;
+            width: 280px;
+            padding: 25px;
             text-align: center;
-            transition: transform 0.3s ease;
+            transition: 0.3s;
             border-bottom: 5px solid #3498db;
         }
 
         .card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
         }
 
         .card i {
-            font-size: 40px;
+            font-size: 35px;
             color: #3498db;
-            margin-bottom: 20px;
-        }
-
-        .card h3 {
-            margin: 10px 0;
-            color: #2c3e50;
-            font-size: 1.4rem;
+            margin-bottom: 15px;
         }
 
         .btn-action {
             background: #3498db;
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 10px;
             border-radius: 5px;
             cursor: pointer;
-            margin-top: 15px;
-            font-weight: bold;
             width: 100%;
-        }
-
-        .btn-action:hover {
-            background: #2980b9;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <!-- Khllinah khawi bach tban ghi sora dyal l-background li fiha l-logo dyalk -->
-</header>
+<!-- Header dyalk daba ghadi ikoun 3amer b sora men l-9net l-l-9net -->
+<header></header>
 
 <div class="section-intro">
     <h2>Votre Partenaire Technologique</h2>
     <p>Nous fournissons les meilleures solutions de sécurité pour votre entreprise.</p>
-    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Technology" class="img-tech">
+    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Tech" class="img-tech">
 </div>
 
 <div class="services-container">

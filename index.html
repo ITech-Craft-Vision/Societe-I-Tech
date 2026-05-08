@@ -106,32 +106,34 @@
             margin-top: 10px;
         }
 
-        /* --- Style Footer --- */
+        /* --- Style Footer (Mise à jour) --- */
         .footer-site {
             background-color: #2c3e50;
             color: #ecf0f1;
-            padding: 30px 20px;
+            padding: 60px 25px 40px 25px; /* Zdt l-padding bach t-hbet l-zone grise */
             font-size: 14px;
             border-top: 4px solid #3498db;
-            text-align: center; /* Koulchi l-wast kif kan fl-awwal */
+            text-align: center;
+            position: relative;
         }
 
         .social-icons-box {
             display: flex;
-            gap: 10px;
-            justify-content: flex-start; /* Ghir hadou li ghay-kounou 3la l-yacer */
-            margin-bottom: 15px;
+            gap: 8px;
+            position: absolute; /* Bach n-7ttouhom l-ta7t 3la l-yacer */
+            bottom: 30px;
+            left: 25px;
         }
 
         .social-icons-box a {
-            width: 35px;
-            height: 35px;
+            width: 32px;
+            height: 32px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-decoration: none;
             color: white;
-            font-size: 18px;
+            font-size: 16px;
             transition: 0.3s;
         }
 
@@ -159,7 +161,6 @@
 <header></header>
 
 <div class="page-body-content">
-
     <div class="section-intro">
         <h2>Votre Partenaire Technologique</h2>
         <p>Nous fournissons les meilleures solutions de sécurité.</p>
@@ -202,7 +203,6 @@
             <button class="btn-action">Consulter un expert</button>
         </div>
     </div>
-
 </div>
 
 <footer class="footer-site">

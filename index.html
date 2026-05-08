@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Societe I-Tech | Nos Spécialités</title>
-    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
@@ -26,7 +25,6 @@
             border: none;
         }
 
-        /* --- Zone dyal l-khalfya li kat-scrolla --- */
         .page-body-content {
             background-image: url('Technologie.jpg'); 
             background-size: cover;
@@ -34,7 +32,7 @@
             background-repeat: no-repeat;
             background-attachment: scroll; 
             padding: 40px 0;
-            min-height: 80vh; /* Bach t-forsa l-khalfya tban */
+            min-height: 80vh;
         }
 
         .section-intro {
@@ -108,7 +106,7 @@
             margin-top: 10px;
         }
 
-        /* --- Style dyal Footer (I-Tech Craft Vision) --- */
+        /* --- Style Footer & Instagram --- */
         .footer-site {
             background-color: #2c3e50;
             color: #ecf0f1;
@@ -127,6 +125,32 @@
             font-weight: bold;
             color: #3498db;
             text-transform: uppercase;
+        }
+
+        .social-container {
+            margin-bottom: 15px;
+        }
+
+        .insta-link {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: 0.3s ease;
+        }
+
+        .insta-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(225, 48, 108, 0.4);
+        }
+
+        .insta-link i {
+            font-size: 1.2rem;
         }
     </style>
 </head>
@@ -181,9 +205,14 @@
 
 </div>
 
-<!-- Ha l-footer li zdt lk l-te7t -->
 <footer class="footer-site">
     <div class="footer-content">
+        <div class="social-container">
+            <a href="https://www.instagram.com/itechcraftvision?igsh=MWRmeWUyeDFnODhvNg==" target="_blank" class="insta-link">
+                <i class="fab fa-instagram"></i> Suivez-nous @itechcraftvision
+            </a>
+        </div>
+        
         <p class="credits">I-Tech Craft Vision</p>
         <p>&copy; 2026 Tous droits réservés.</p>
         <p>Fès, Maroc | Excellence en Maintenance Informatique et Systèmes de Sécurité.</p>

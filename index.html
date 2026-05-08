@@ -25,6 +25,7 @@
             border: none;
         }
 
+        /* --- Zone dyal l-khalfya li kat-scrolla --- */
         .page-body-content {
             background-image: url('Technologie.jpg'); 
             background-size: cover;
@@ -106,51 +107,66 @@
             margin-top: 10px;
         }
 
-        /* --- Style Footer & Instagram --- */
+        /* --- Style dyal Footer (Modifié pour ressembler à la capture) --- */
         .footer-site {
             background-color: #2c3e50;
             color: #ecf0f1;
-            text-align: center;
-            padding: 30px 20px;
+            text-align: left; /* Pour aligner comme la photo */
+            padding: 40px 25px;
             font-size: 14px;
             border-top: 4px solid #3498db;
         }
 
-        .footer-site p {
-            margin: 8px 0;
-            letter-spacing: 1px;
+        .rest-connect {
+            font-size: 22px;
+            margin-bottom: 5px;
+            color: #fff;
+            font-weight: normal;
+        }
+
+        .footer-line {
+            width: 100%;
+            max-width: 300px; /* Bach dji f lecer b7al sora */
+            border: 0;
+            border-top: 2px solid #a2c11c;
+            margin: 5px 0 20px 0;
+        }
+
+        .social-icons-box {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .social-icons-box a {
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .icon-fb { background-color: #3b5998; }
+        .icon-insta { background-color: #e4405f; }
+
+        .social-icons-box a:hover {
+            opacity: 0.8;
+            transform: scale(1.1);
         }
 
         .footer-site .credits {
             font-weight: bold;
             color: #3498db;
             text-transform: uppercase;
+            margin-top: 20px;
         }
-
-        .social-container {
-            margin-bottom: 15px;
-        }
-
-        .insta-link {
-            text-decoration: none;
-            color: #fff;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-            padding: 8px 15px;
-            border-radius: 20px;
-            transition: 0.3s ease;
-        }
-
-        .insta-link:hover {
-            transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(225, 48, 108, 0.4);
-        }
-
-        .insta-link i {
-            font-size: 1.2rem;
+        
+        .footer-site p {
+            margin: 5px 0;
         }
     </style>
 </head>
@@ -207,9 +223,15 @@
 
 <footer class="footer-site">
     <div class="footer-content">
-        <div class="social-container">
-            <a href="https://www.instagram.com/itechcraftvision?igsh=MWRmeWUyeDFnODhvNg==" target="_blank" class="insta-link">
-                <i class="fab fa-instagram"></i> Suivez-nous @itechcraftvision
+        <p class="rest-connect">Restez connectés</p>
+        <hr class="footer-line">
+        
+        <div class="social-icons-box">
+            <a href="https://www.facebook.com/profile.php?id=61566760322532" target="_blank" class="icon-fb">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/itechcraftvision?igsh=MWRmeWUyeDFnODhvNg==" target="_blank" class="icon-insta">
+                <i class="fab fa-instagram"></i>
             </a>
         </div>
         

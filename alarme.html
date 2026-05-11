@@ -5,82 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Société I-Tech | Système d'alarme</title>
     <style>
-        /* كود التصميم الأساسي */
+        /* --- كود التصميم CSS --- */
         body {
             background-color: #f4f7f6;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
-            flex-direction: column; /* ترتيب العناصر عمودياً */
+            flex-direction: column;
             align-items: center;
             min-height: 100vh;
             margin: 0;
             padding: 40px 20px;
         }
 
-        /* تنسيق البطاقة العلوية */
-        .card {
+        /* البطاقة العلوية الأساسية */
+        .main-card {
             background-color: white;
             width: 100%;
-            max-width: 400px;
+            max-width: 450px;
             padding: 40px 20px;
             border-radius: 12px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
             text-align: center;
             border-bottom: 5px solid #12a5b8;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
 
         .icon-box {
             color: #12a5b8;
-            font-size: 50px;
+            font-size: 55px;
             margin-bottom: 15px;
         }
 
-        h2 {
+        .main-card h2 {
             margin: 0;
-            font-size: 24px;
+            font-size: 26px;
             color: #333;
         }
 
         .description {
             color: #777;
             font-size: 18px;
-            margin: 15px 0 30px 0;
+            margin: 15px 0 0 0;
             direction: rtl;
         }
 
-        /* تنسيق الزر - بحال Système incendie تماماً */
-        .btn-action {
-            display: inline-block;
-            background-color: #12a5b8;
-            color: white;
-            text-decoration: none;
-            padding: 12px 30px;
-            width: 80%;
-            border-radius: 6px;
-            font-weight: bold;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-action:hover {
-            background-color: #0e8a9a;
-            transform: translateY(-2px);
-        }
-
-        /* تنسيق معرض الصور */
+        /* قسم معرض الصور */
         .gallery-section {
             width: 100%;
-            max-width: 1000px;
+            max-width: 1100px;
             text-align: center;
         }
 
         .gallery-section h3 {
             color: #2c3e50;
-            margin-bottom: 25px;
-            font-size: 22px;
+            margin-bottom: 35px;
+            font-size: 24px;
             position: relative;
             padding-bottom: 10px;
         }
@@ -91,58 +70,123 @@
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 60px;
+            width: 80px;
             height: 3px;
             background-color: #12a5b8;
         }
 
+        /* شبكة البطاقات الصغيرة */
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
             padding: 10px;
         }
 
-        .gallery-grid img {
+        /* تصميم البطاقة الصغيرة لكل صورة */
+        .item-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .item-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(18, 165, 184, 0.2);
+        }
+
+        .item-card img {
             width: 100%;
             height: 200px;
-            object-fit: cover; /* باش التصويرة متخسرش */
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
+            object-fit: cover;
+            border-bottom: 3px solid #f4f7f6;
         }
 
-        .gallery-grid img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(18, 165, 184, 0.3);
+        .item-info {
+            padding: 20px;
+            text-align: right;
+            direction: rtl;
         }
 
-        /* تحسينات للشاشات الصغيرة */
+        .item-info h4 {
+            margin: 0 0 10px 0;
+            color: #12a5b8;
+            font-size: 19px;
+        }
+
+        .item-info p {
+            margin: 0;
+            color: #666;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* التجاوب مع الشاشات */
         @media (max-width: 600px) {
             .gallery-grid {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
 
-    <div class="card">
+    <div class="main-card">
         <div class="icon-box">🔔</div>
         <h2>Système d'alarme</h2>
         <p class="description">أنظمة الحماية المتكاملة والإنذار</p>
-        <a href="#" class="btn-action">En savoir plus</a>
     </div>
 
     <div class="gallery-section">
-        <h3>معرض الصور</h3>
+        <h3>مكونات نظام الإنذار</h3>
+        
         <div class="gallery-grid">
-            <img src="alarme1.jpg" alt="Installation 1">
-            <img src="alarme2.jpg" alt="Installation 2">
-            <img src="alarme3.jpg" alt="Installation 3">
-            <img src="alarme4.jpg" alt="Installation 4">
-            <img src="alarme5.jpg" alt="Installation 5">
+            
+            <div class="item-card">
+                <img src="alarme1.jpg" alt="Centrale d'alarme">
+                <div class="item-info">
+                    <h4>لوحة التحكم المركزية</h4>
+                    <p>هي العقل المدبر للنظام، كتربط جميع الأجهزة وكتصيفط التنبيهات للهاتف.</p>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <img src="alarme2.jpg" alt="Détecteur de mouvement">
+                <div class="item-info">
+                    <h4>حساس الحركة الذكي</h4>
+                    <p>كيخدم بالأشعة تحت الحمراء باش يكشف أي تحرك مشبوه بدقة عالية.</p>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <img src="alarme3.jpg" alt="Sirène d'alarme">
+                <div class="item-info">
+                    <h4>جرس الإنذار الخارجي</h4>
+                    <p>قوة صوتية هائلة لطرد المتسللين وتنبيه الجيران في حالة الخطر.</p>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <img src="alarme4.jpg" alt="Clavier sans fil">
+                <div class="item-info">
+                    <h4>لوحة المفاتيح اللاسلكية</h4>
+                    <p>كتسمح ليك بتشغيل أو إيقاف النظام بسهولة باستعمال رمز سري خاص.</p>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <img src="alarme5.jpg" alt="Détecteur d'ouverture">
+                <div class="item-info">
+                    <h4>حساس الأبواب والنوافذ</h4>
+                    <p>كيصيفط إنذار فوري بمجرد ما يتحل الباب أو الشباك اللي محمي.</p>
+                </div>
+            </div>
+
         </div>
     </div>
 

@@ -25,7 +25,6 @@
             line-height: 1.6;
         }
 
-        /* --- العنوان الرئيسي --- */
         .section-header {
             text-align: center;
             margin-bottom: 70px;
@@ -50,7 +49,6 @@
             border-radius: 2px;
         }
 
-        /* --- الشبكة --- */
         .items-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -60,7 +58,6 @@
             margin: 0 auto;
         }
 
-        /* --- البطاقة --- */
         .item-card {
             background: var(--white);
             border-radius: 24px;
@@ -70,6 +67,7 @@
             border: 1px solid rgba(18, 165, 184, 0.1);
             display: flex;
             flex-direction: column;
+            height: 100%; /* باش يجو قد قد فالطول */
         }
 
         .item-card:hover {
@@ -116,7 +114,7 @@
             direction: rtl;
             display: flex;
             flex-direction: column;
-            flex-grow: 1; /* يضمن توزيع المساحة بالتساوي */
+            flex-grow: 1; /* كيعمر الفراغ اللي بقى فالبطاقة */
         }
 
         .item-info h4 {
@@ -140,13 +138,13 @@
             margin-bottom: 25px;
             color: #718096;
             font-size: 15px;
-            flex-grow: 1; /* يدفع الزر للأسفل ليكون في نفس المستوى في كل البطاقات */
+            flex-grow: 1; /* كيدفع البوطون لتحت باش يجو كاملين فسطر واحد */
         }
 
-        /* --- الزر الطويل (Long Button) --- */
+        /* --- الحل هنا: الزر الطويل --- */
         .btn-action {
-            display: block;
-            width: 100%; 
+            display: block;          /* هادي ضرورية باش ياخد العرض كامل */
+            width: 100%;             /* العرض كامل */
             background: var(--primary);
             color: white;
             text-decoration: none;
@@ -159,7 +157,7 @@
             box-shadow: 0 4px 12px rgba(18, 165, 184, 0.2);
             border: none;
             cursor: pointer;
-            box-sizing: border-box; /* مهم جداً لضمان عدم خروج الزر عن الإطار */
+            box-sizing: border-box; /* باش الـ padding ما يخرجوش البوطون على الإطار */
         }
 
         .btn-action:hover {
@@ -181,7 +179,6 @@
     </header>
 
     <div class="items-grid">
-        
         <div class="item-card">
             <div class="img-container">
                 <span class="tech-badge">Smart Logic</span>
@@ -229,7 +226,6 @@
                 <a href="#" class="btn-action">En savoir plus</a>
             </div>
         </div>
-
     </div>
 
 </body>

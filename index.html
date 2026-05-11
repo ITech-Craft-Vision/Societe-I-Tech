@@ -75,6 +75,9 @@
             text-align: center;
             transition: 0.3s;
             border-bottom: 5px solid #3498db;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .card:hover {
@@ -94,19 +97,28 @@
             color: #2c3e50;
         }
 
+        .card p {
+            margin-bottom: 20px;
+            min-height: 40px;
+        }
+
+        /* Style unique pour tous les boutons/liens d'action */
         .btn-action {
             background: #3498db;
             color: white;
-            border: none;
-            padding: 10px;
+            padding: 12px;
             border-radius: 5px;
-            cursor: pointer;
-            width: 100%;
             font-weight: bold;
-            margin-top: 10px;
-            display: block;
             text-decoration: none;
-            box-sizing: border-box;
+            display: block;
+            text-align: center;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-action:hover {
+            background: #2980b9;
         }
 
         .footer-site {
@@ -127,7 +139,7 @@
         }
 
         .follow-us-text {
-            color: #ffffff; /* TEXTE CHANGÉ EN BLANC ICI */
+            color: #ffffff; /* Texte en blanc */
             font-weight: bold;
             margin-bottom: 12px;
             display: block;
@@ -182,39 +194,54 @@
     </div>
 
     <div class="services-container">
+        <!-- Surveillance caméra -->
         <div class="card">
-            <i class="fas fa-camera"></i>
-            <h3>Surveillance caméra</h3>
-            <p>متخصصون في تركيب وصيانة كاميرات المراقبة</p>
-            <button class="btn-action">Demander un devis</button>
+            <div>
+                <i class="fas fa-camera"></i>
+                <h3>Surveillance caméra</h3>
+                <p>متخصصون في تركيب وصيانة كاميرات المراقبة</p>
+            </div>
+            <a href="devis.html" class="btn-action">Demander un devis</a>
         </div>
 
+        <!-- Système incendie -->
         <div class="card">
-            <i class="fas fa-fire"></i>
-            <h3>Système incendie</h3>
-            <p>أنظمة الكشف عن الحرائق والوقاية</p>
+            <div>
+                <i class="fas fa-fire"></i>
+                <h3>Système incendie</h3>
+                <p>أنظمة الكشف عن الحرائق والوقاية</p>
+            </div>
             <a href="incendie.html" class="btn-action">Voir les options</a>
         </div>
 
+        <!-- Système d'alarme -->
         <div class="card">
-            <i class="fas fa-bell"></i>
-            <h3>Système d'alarme</h3>
-            <p>أنظمة الحماية المتكاملة والإنذار</p>
+            <div>
+                <i class="fas fa-bell"></i>
+                <h3>Système d'alarme</h3>
+                <p>أنظمة الحماية المتكاملة والإنذار</p>
+            </div>
             <a href="alarme.html" class="btn-action">En savoir plus</a>
         </div>
 
+        <!-- Vente et Réparation PC -->
         <div class="card">
-            <i class="fas fa-tools"></i>
-            <h3>Vente et Réparation PC</h3>
-            <p>بيع وإصلاح جميع أنواع الحواسيب</p>
-            <button class="btn-action">Service Technique</button>
+            <div>
+                <i class="fas fa-tools"></i>
+                <h3>Vente et Réparation PC</h3>
+                <p>بيع وإصلاح جميع أنواع الحواسيب</p>
+            </div>
+            <a href="reparation.html" class="btn-action">Service Technique</a>
         </div>
 
+        <!-- Services réseau -->
         <div class="card">
-            <i class="fas fa-network-wired"></i>
-            <h3>Services réseau</h3>
-            <p>حلول الشبكات السلكية واللاسلكية</p>
-            <button class="btn-action">Consulter un expert</button>
+            <div>
+                <i class="fas fa-network-wired"></i>
+                <h3>Services réseau</h3>
+                <p>حلول الشبكات السلكية واللاسلكية</p>
+            </div>
+            <a href="reseau.html" class="btn-action">Consulter un expert</a>
         </div>
     </div>
 </div>

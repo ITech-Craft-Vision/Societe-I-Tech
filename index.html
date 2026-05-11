@@ -1,226 +1,236 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Societe I-Tech | Nos Spécialités</title>
+    <title>I-Tech | Expertise en Sécurité</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    
     <style>
+        :root {
+            --primary: #12a5b8;
+            --secondary: #2c3e50;
+            --bg: #f8fafb;
+            --white: #ffffff;
+            --text: #4a5568;
+        }
+
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: var(--bg);
+            font-family: 'Poppins', 'Cairo', sans-serif;
             margin: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            padding: 60px 20px;
+            color: var(--text);
+            line-height: 1.6;
         }
 
-        header {
-            background-image: url('Amine.jpg');
-            background-repeat: no-repeat;
-            background-size: 100% 100%; 
-            background-position: center;
-            height: 250px;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            border: none;
-        }
-
-        .page-body-content {
-            background-image: url('Technologie.jpg'); 
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: scroll; 
-            padding: 40px 0;
-            min-height: 80vh;
-        }
-
-        .section-intro {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 30px;
-            max-width: 900px;
-            margin: 0 auto 40px auto;
-            border-radius: 15px;
+        /* --- العنوان الرئيسي --- */
+        .section-header {
             text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 70px;
         }
 
-        .img-tech {
+        .section-header h1 {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin: 0;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h1::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            right: 0;
+            width: 60%;
+            height: 4px;
+            background: linear-gradient(to left, var(--primary), transparent);
+            border-radius: 2px;
+        }
+
+        /* --- الشبكة --- */
+        .items-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
             width: 100%;
-            max-width: 650px;
-            border-radius: 12px;
-            margin-top: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .services-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
-        .card {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            width: 280px;
-            padding: 25px;
-            text-align: center;
-            transition: 0.3s;
-            border-bottom: 5px solid #3498db;
+        /* --- البطاقة --- */
+        .item-card {
+            background: var(--white);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(18, 165, 184, 0.1);
+            display: flex;
+            flex-direction: column;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            background: white;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        .item-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 30px 60px rgba(18, 165, 184, 0.15);
+            border-color: var(--primary);
         }
 
-        .card i {
-            font-size: 35px;
-            color: #3498db;
-            margin-bottom: 15px;
-        }
-
-        .card h3 {
-            margin: 10px 0;
-            color: #2c3e50;
-        }
-
-        .btn-action {
-            background: #3498db;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
+        .img-container {
             width: 100%;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-
-        /* --- Style Footer (Mise à jour) --- */
-        .footer-site {
-            background-color: #2c3e50;
-            color: #ecf0f1;
-            padding: 60px 25px 40px 25px; /* Zdt l-padding bach t-hbet l-zone grise */
-            font-size: 14px;
-            border-top: 4px solid #3498db;
-            text-align: center;
+            height: 300px;
+            overflow: hidden;
             position: relative;
         }
 
-        .social-icons-box {
-            display: flex;
-            gap: 8px;
-            position: absolute; /* Bach n-7ttouhom l-ta7t 3la l-yacer */
-            bottom: 30px;
-            left: 25px;
+        .item-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
         }
 
-        .social-icons-box a {
-            width: 32px;
-            height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            color: white;
-            font-size: 16px;
-            transition: 0.3s;
-        }
-
-        .icon-fb { background-color: #3b5998; }
-        .icon-insta { background-color: #e4405f; }
-
-        .social-icons-box a:hover {
-            opacity: 0.8;
+        .item-card:hover img {
             transform: scale(1.1);
         }
 
-        .footer-site .credits {
+        .tech-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(18, 165, 184, 0.9);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 11px;
             font-weight: bold;
-            color: #3498db;
-            text-transform: uppercase;
+            backdrop-filter: blur(5px);
+            z-index: 2;
         }
-        
-        .footer-site p {
-            margin: 5px 0;
+
+        .item-info {
+            padding: 30px;
+            text-align: right;
+            direction: rtl;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1; /* يضمن توزيع المساحة بالتساوي */
+        }
+
+        .item-info h4 {
+            margin: 0 0 15px 0;
+            color: var(--secondary);
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .item-info h4 i {
+            color: var(--primary);
+            background: rgba(18, 165, 184, 0.1);
+            padding: 10px;
+            border-radius: 12px;
+            font-size: 18px;
+        }
+
+        .item-info p {
+            margin-bottom: 25px;
+            color: #718096;
+            font-size: 15px;
+            flex-grow: 1; /* يدفع الزر للأسفل ليكون في نفس المستوى في كل البطاقات */
+        }
+
+        /* --- الزر الطويل (Long Button) --- */
+        .btn-action {
+            display: block;
+            width: 100%; 
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 14px 0;
+            border-radius: 12px;
+            font-weight: 700;
+            text-align: center;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(18, 165, 184, 0.2);
+            border: none;
+            cursor: pointer;
+            box-sizing: border-box; /* مهم جداً لضمان عدم خروج الزر عن الإطار */
+        }
+
+        .btn-action:hover {
+            background: var(--secondary);
+            box-shadow: 0 8px 20px rgba(44, 62, 80, 0.3);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 900px) {
+            .items-grid { grid-template-columns: 1fr; gap: 30px; }
+            .section-header h1 { font-size: 1.8rem; }
         }
     </style>
 </head>
 <body>
 
-<header></header>
+    <header class="section-header">
+        <h1>تفاصيل نظام الحماية المتطور</h1>
+    </header>
 
-<div class="page-body-content">
-    <div class="section-intro">
-        <h2>Votre Partenaire Technologique</h2>
-        <p>Nous fournissons les meilleures solutions de sécurité.</p>
-        <img src="https://t3.ftcdn.net/jpg/01/62/30/58/360_F_1623058132_kG5ipb3Bf4RfZYd0SwBZQuhrMwIvXvVx.jpg" alt="Caméra de Surveillance" class="img-tech">
-    </div>
-
-    <div class="services-container">
-        <div class="card">
-            <i class="fas fa-camera"></i>
-            <h3>Surveillance caméra</h3>
-            <p>متخصصون في تركيب وصيانة كاميرات المراقبة</p>
-            <button class="btn-action">Demander un devis</button>
+    <div class="items-grid">
+        
+        <div class="item-card">
+            <div class="img-container">
+                <span class="tech-badge">Smart Logic</span>
+                <img src="alarme1.jpg" alt="Centrale">
+            </div>
+            <div class="item-info">
+                <h4><i class="fas fa-microchip"></i> لوحة التحكم المركزية</h4>
+                <p>نظام تشفير عالي الأمان يضمن استجابة فورية وسرعة في إرسال التنبيهات عبر السحابة الذكية.</p>
+                <a href="#" class="btn-action">En savoir plus</a>
+            </div>
         </div>
 
-        <div class="card">
-            <i class="fas fa-fire"></i>
-            <h3>Système incendie</h3>
-            <p>أنظمة الكشف عن الحرائق والوقاية</p>
-            <a href="incendie.html" class="btn-action" style="text-decoration: none; display: block; text-align: center;">Voir les options</a>
+        <div class="item-card">
+            <div class="img-container">
+                <span class="tech-badge">Precision</span>
+                <img src="alarme2.jpg" alt="Sensor">
+            </div>
+            <div class="item-info">
+                <h4><i class="fas fa-rss"></i> حساس الحركة المتقدم</h4>
+                <p>تكنولوجيا الاستشعار بالأشعة تحت الحمراء التي تتجاهل الحيوانات الأليفة وتركز على التهديدات الحقيقية.</p>
+                <a href="#" class="btn-action">En savoir plus</a>
+            </div>
         </div>
 
-<div class="card">
-    <i class="fas fa-bell"></i>
-    <h3>Système d'alarme</h3>
-    <p>أنظمة الحماية المتكاملة والإنذار</p>
-    
-    <a href="alarme.html" class="btn-action" style="text-decoration: none;">En savoir plus</a>
-</div>
-        <div class="card">
-            <i class="fas fa-tools"></i>
-            <h3>Vente et Réparation PC</h3>
-            <p>بيع وإصلاح جميع أنواع الحواسيب</p>
-            <button class="btn-action">Service Technique</button>
+        <div class="item-card">
+            <div class="img-container">
+                <span class="tech-badge">High Decibel</span>
+                <img src="alarme3.jpg" alt="Siren">
+            </div>
+            <div class="item-info">
+                <h4><i class="fas fa-volume-up"></i> جرس الإنذار الذكي</h4>
+                <p>صوت ردع يصل إلى 110 ديسيبل مع إضاءة تنبيهية قوية تضمن لفت الانتباه في حالات الطوارئ القصوى.</p>
+                <a href="#" class="btn-action">En savoir plus</a>
+            </div>
         </div>
 
-        <div class="card">
-            <i class="fas fa-network-wired"></i>
-            <h3>Services réseau</h3>
-            <p>حلول الشبكات السلكية واللاسلكية</p>
-            <button class="btn-action">Consulter un expert</button>
+        <div class="item-card">
+            <div class="img-container">
+                <span class="tech-badge">Security Control</span>
+                <img src="alarme4.jpg" alt="Keypad">
+            </div>
+            <div class="item-info">
+                <h4><i class="fas fa-fingerprint"></i> وحدة التحكم الرقمية</h4>
+                <p>واجهة مستخدم عصرية تتيح لك التحكم الكامل في النظام بلمسة واحدة مع دعم أكواد دخول متعددة.</p>
+                <a href="#" class="btn-action">En savoir plus</a>
+            </div>
         </div>
-    </div>
-</div>
 
-<footer class="footer-site">
-    <div class="social-icons-box">
-        <a href="https://www.facebook.com/profile.php?id=61566760322532" target="_blank" class="icon-fb">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="https://www.instagram.com/itechcraftvision?igsh=MWRmeWUyeDFnODhvNg==" target="_blank" class="icon-insta">
-            <i class="fab fa-instagram"></i>
-        </a>
     </div>
-    
-    <div class="footer-text">
-        <p class="credits">I-Tech Craft Vision</p>
-        <p>&copy; 2026 Tous droits réservés.</p>
-        <p>Fès, Maroc | Excellence en Maintenance Informatique et Systèmes de Sécurité.</p>
-    </div>
-</footer>
 
 </body>
 </html>

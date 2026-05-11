@@ -9,120 +9,136 @@
             background-color: #f4f7f6;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 40px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        .details-container {
-            width: 100%;
-            max-width: 800px;
-        }
-
         .section-title {
             text-align: center;
             color: #2c3e50;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
             font-size: 28px;
-            border-bottom: 3px solid #12a5b8;
-            display: inline-block;
-            padding-bottom: 10px;
-            width: 100%;
+            position: relative;
+            padding-bottom: 15px;
         }
 
-        /* تنسيق البطاقات: وحدة تحت وحدة */
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background-color: #12a5b8;
+            border-radius: 2px;
+        }
+
+        /* حاوية الصور: جوج في كل سطر */
+        .items-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* جوج أعمدة قد قد */
+            gap: 40px; /* المسافة اللي طلبتي بيناتهم */
+            width: 100%;
+            max-width: 1000px;
+        }
+
         .item-card {
             background: white;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-            margin-bottom: 30px; /* فراغ بين كل صورة وصورة */
-            transition: transform 0.3s ease;
-            border-left: 5px solid #12a5b8; /* ديكور خفيف على الجنب */
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #eee;
         }
 
         .item-card:hover {
-            transform: scale(1.02);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(18, 165, 184, 0.15);
         }
 
         .item-card img {
             width: 100%;
-            height: auto;
-            max-height: 400px;
+            height: 250px;
             object-fit: cover;
-            display: block;
         }
 
         .item-info {
-            padding: 25px;
+            padding: 20px;
             text-align: right;
             direction: rtl;
+            flex-grow: 1;
         }
 
         .item-info h4 {
-            margin: 0 0 12px 0;
+            margin: 0 0 10px 0;
             color: #12a5b8;
-            font-size: 22px;
+            font-size: 20px;
         }
 
         .item-info p {
             margin: 0;
-            color: #555;
-            font-size: 17px;
+            color: #666;
+            font-size: 15px;
             line-height: 1.6;
         }
 
-        /* تحسينات للهاتف */
-        @media (max-width: 600px) {
-            body { padding: 10px; }
-            .item-info h4 { font-size: 19px; }
-            .item-info p { font-size: 15px; }
+        /* إلا تحل السيت من التلفون، يرجعو وحدة تحت وحدة باش يبقاو باينين */
+        @media (max-width: 768px) {
+            .items-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="details-container">
-        <h1 class="section-title">تفاصيل ومكونات نظام الإنذار</h1>
+    <h1 class="section-title">مكونات نظام الإنذار المتكامل</h1>
 
+    <div class="items-grid">
+        
         <div class="item-card">
             <img src="alarme1.jpg" alt="Centrale d'alarme">
             <div class="item-info">
-                <h4>لوحة التحكم المركزية (La Centrale)</h4>
-                <p>هي العقل المدبر للنظام، كتربط جميع الحساسات وكتصيفط التنبيهات للهاتف فوراً في حالة وجود خطر.</p>
+                <h4>لوحة التحكم المركزية</h4>
+                <p>العقل المدبر للنظام اللي كيربط الأجهزة وكتصيفط التنبيهات للهاتف.</p>
             </div>
         </div>
 
         <div class="item-card">
             <img src="alarme2.jpg" alt="Détecteur de mouvement">
             <div class="item-info">
-                <h4>حساس الحركة (Détecteur de mouvement)</h4>
-                <p>كيخدم بتقنية الأشعة تحت الحمراء باش يراقب المكان ويكشف أي تحرك غير مرغوب فيه بدقة عالية.</p>
+                <h4>حساس الحركة</h4>
+                <p>كيكشف أي تحرك مشبوه فالمكان بدقة عالية وكيخدم بالأشعة تحت الحمراء.</p>
             </div>
         </div>
 
         <div class="item-card">
             <img src="alarme3.jpg" alt="Sirène">
             <div class="item-info">
-                <h4>جرس الإنذار (Sirène)</h4>
-                <p>كيصدر صوت قوي جداً باش ينبه الجيران ويخلع المتسللين، وكيتعتبر من أهم وسائل الردع.</p>
+                <h4>جرس الإنذار</h4>
+                <p>صوت قوي لتنبيه الجيران وخلع المتسللين، أساسي في أي نظام حماية.</p>
             </div>
         </div>
 
         <div class="item-card">
             <img src="alarme4.jpg" alt="Clavier">
             <div class="item-info">
-                <h4>لوحة المفاتيح (Clavier)</h4>
-                <p>منها كتحكم في النظام (تفعلو أو تطفيه) باستعمال الكود السري الخاص بك، سهلة الاستعمال وعملية.</p>
+                <h4>لوحة التحكم الرقمية</h4>
+                <p>كتسمح ليك تشعل أو تطفي النظام بكل سهولة باستعمال كود سري.</p>
             </div>
         </div>
 
         <div class="item-card">
-            <img src="alarme5.jpg" alt="Capteur d'ouverture">
+            <img src="alarme5.jpg" alt="Capteur">
             <div class="item-info">
-                <h4>حساس النوافذ والأبواب</h4>
-                <p>كيتحط في المداخل وكيعطي إنذار في اللحظة اللي كيتحل فيها الباب أو الشباك بطريقة غير قانونية.</p>
+                <h4>حساس الأبواب</h4>
+                <p>حماية المداخل والنوافذ، كيعطي إنذار فوري بمجرد محاولة فتحها.</p>
             </div>
         </div>
 

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I-Tech | Systèmes Incendie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .header-incendie {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('Technologie.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .grid-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 200px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-info h3 {
+            margin: 0 0 10px 0;
+            color: #e74c3c; /* لون أحمر كيدل على أنظمة الحريق */
+        }
+
+        .product-info p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .tech-specs {
+            margin-top: 15px;
+            background: #fff5f5;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header-incendie">
+    <h1>Solutions de Protection Contre l'Incendie</h1>
+</div>
+
+<div class="container">
+    <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Retour à l'accueil</a>
+
+    <div class="grid-options">
+        <div class="product-card">
+            <div class="product-img">
+                <img src="incendie1.jpg" alt="Détecteur de fumée">
+            </div>
+            <div class="product-info">
+                <h3>Détecteurs Automatiques</h3>
+                <p>أنظمة كشف متطورة تعمل بالأشعة تحت الحمراء لتحديد مصدر الحريق في ثوانٍ معدودة قبل انتشاره.</p>
+                <div class="tech-specs">
+                    <strong>Fiche Technique:</strong> Sensibilité réglable, Autonomie 5 ans, Certifié CE.
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="incendie2.jpg" alt="Centrale Incendie">
+            </div>
+            <div class="product-info">
+                <h3>Centrale de Surveillance</h3>
+                <p>لوحة تحكم مركزية تمكنك من مراقبة جميع طوابق البناية، مع إمكانية الربط مع نظام الإتصال الهاتفي للطوارئ.</p>
+                <div class="tech-specs">
+                    <strong>Fiche Technique:</strong> Ecran LCD, Batterie de secours, 8 zones de contrôle.
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="incendie3.jpg" alt="Sirène d'alarme">
+            </div>
+            <div class="product-info">
+                <h3>Sirènes et Signalisation</h3>
+                <p>منبهات صوتية وضوئية قوية تضمن إخلاء المكان بسرعة وبنظام في حالة الخطر.</p>
+                <div class="tech-specs">
+                    <strong>Fiche Technique:</strong> 110dB, Flash LED intégré, Anti-vandalism.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
